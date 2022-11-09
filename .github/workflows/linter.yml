@@ -2,9 +2,9 @@ name: Linter
 
 on:
   push:
-    branches: [ "master" ]
+    branches: ["master"]
   pull_request:
-    branches: [ "master" ]
+    branches: ["master"]
   
 jobs:
   build:
@@ -18,7 +18,7 @@ jobs:
           java-version: '15'
           distribution: 'adopt'
       - name: Lint Code Base
-        uses:  github/super-linter/slim@v4
+        uses: github/super-linter/slim@v4
         env:
           DEFAULT_BRANCH: master
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
